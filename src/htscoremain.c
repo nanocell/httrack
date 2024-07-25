@@ -1787,11 +1787,12 @@ static int hts_main_internal(int argc, char **argv, httrackp * opt) {
                     HTS_PANIC_PRINTF("Empty string given");
                     htsmain_free();
                     return -1;
-                  } else if (strlen(argv[na]) >= 256) {
-                    HTS_PANIC_PRINTF("Header line string too long");
-                    htsmain_free();
-                    return -1;
-                  }
+                  } 
+		  //else if (strlen(argv[na]) >= 256) {
+                  //  HTS_PANIC_PRINTF("Header line string too long");
+                  //  htsmain_free();
+                  //  return -1;
+                  //}
                   StringCat(opt->headers, argv[na]);
                   StringCat(opt->headers, "\r\n");  /* separator */
                 }
